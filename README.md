@@ -1,13 +1,13 @@
 
 Smiling
 =====
-Smile (Statistical Machine Intelligence and Learning Engine For Streaming Data) 
+Smiling (Statistical Machine Intelligence and Learning Engine For Streaming Data) 
 is an extension of Smile machine learning framework, that focuses on knowledge discovery from data streams.
 
 For the original version of Smile, see [project website](http://haifengl.github.io/smile/), or read the description below
 
 
-Smile
+Original Smile
 =====
 
 [![Join the chat at https://gitter.im/haifengl/smile](https://badges.gitter.im/haifengl/smile.svg)](https://gitter.im/haifengl/smile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.haifengl/smile-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.haifengl/smile-core)
