@@ -1,13 +1,13 @@
 
 Smiling
 =====
-Smile (Statistical Machine Intelligence and Learning Engine For Streaming Data) 
+Smiling (Statistical Machine Intelligence and Learning Engine For Streaming Data) 
 is an extension of Smile machine learning framework, that focuses on knowledge discovery from data streams.
 
 For the original version of Smile, see [project website](http://haifengl.github.io/smile/), or read the description below
 
 
-Smile
+Original Smile
 =====
 
 Smile (Statistical Machine Intelligence and Learning Engine) is
