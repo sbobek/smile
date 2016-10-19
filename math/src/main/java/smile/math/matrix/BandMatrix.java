@@ -141,6 +141,10 @@ public class BandMatrix implements IMatrix {
     }
 
     @Override
+    public double apply(int i, int j) {
+        return A[i][j-i+m1];
+    }
+
     public BandMatrix set(int i, int j, double x) {
         A[i][j-i+m1] = x;
         return this;
@@ -150,17 +154,28 @@ public class BandMatrix implements IMatrix {
      * Returns the matrix transpose.
      * @return the transpose of matrix.
      */
+    @Override
     public BandMatrix transpose() {
         BandMatrix at = new BandMatrix(n, m2, m1);
         for (int i = 0; i < n; i++) {
             for (int j = i-m2; j <= i+m1; j++) {
                 if (j >= 0 && j < n) {
-                    at.set(i, j, get(j,i));
+                    at.set(i, j, get(j, i));
                 }
             }
         }
 
         return at;
+    }
+
+    @Override
+    public BandMatrix ata() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public BandMatrix aat() {
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -480,7 +495,7 @@ public class BandMatrix implements IMatrix {
         // Solve for the error term.
         solve(r);
 
-        // Subtract the error from the old soluiton.
+        // Subtract the error from the old solution.
         for (int i = 0; i < n; i++) {
             x[i] -= r[i];
         }

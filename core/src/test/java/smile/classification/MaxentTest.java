@@ -18,7 +18,6 @@ package smile.classification;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.junit.After;
@@ -44,25 +43,25 @@ public class MaxentTest {
     @SuppressWarnings("unused")
     Dataset load(String resource) {
         int p = 0;
-        ArrayList<int[]> x = new ArrayList<int[]>();
-        ArrayList<Integer> y = new ArrayList<Integer>();
+        ArrayList<int[]> x = new ArrayList<>();
+        ArrayList<Integer> y = new ArrayList<>();
 
-        try (BufferedReader input = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(resource)))) {
+        try (BufferedReader input = smile.data.parser.IOUtils.getTestDataReader(resource)) {
             String[] words = input.readLine().split(" ");
-            int nseq = Integer.valueOf(words[0]);
-            int k = Integer.valueOf(words[1]);
-            p = Integer.valueOf(words[2]);
+            int nseq = Integer.parseInt(words[0]);
+            int k = Integer.parseInt(words[1]);
+            p = Integer.parseInt(words[2]);
 
             String line = null;
             while ((line = input.readLine()) != null) {
                 words = line.split(" ");
-                int seqid = Integer.valueOf(words[0]);
-                int pos = Integer.valueOf(words[1]);
-                int len = Integer.valueOf(words[2]);
+                int seqid = Integer.parseInt(words[0]);
+                int pos = Integer.parseInt(words[1]);
+                int len = Integer.parseInt(words[2]);
 
                 int[] feature = new int[len];
                 for (int i = 0; i < len; i++) {
-                    feature[i] = Integer.valueOf(words[i+3]);
+                    feature[i] = Integer.parseInt(words[i+3]);
                 }
 
                 x.add(feature);
@@ -110,8 +109,8 @@ public class MaxentTest {
     @Test
     public void testLearnProtein() {
         System.out.println("learn protein");
-        Dataset train = load("/smile/data/sequence/sparse.protein.11.train");
-        Dataset test = load("/smile/data/sequence/sparse.protein.11.test");
+        Dataset train = load("sequence/sparse.protein.11.train");
+        Dataset test = load("sequence/sparse.protein.11.test");
 
         Maxent maxent = new Maxent(train.p, train.x, train.y, 0.1, 1E-5, 500);
         
@@ -122,8 +121,8 @@ public class MaxentTest {
             }
         }
 
-        System.out.format("Protein error is %d of %d\n", error, test.x.length);
-        System.out.format("Protein error rate = %.2f%%\n", 100.0 * error / test.x.length);
+        System.out.format("Protein error is %d of %d%n", error, test.x.length);
+        System.out.format("Protein error rate = %.2f%%%n", 100.0 * error / test.x.length);
         assertEquals(1338, error);
     }
 
@@ -133,8 +132,8 @@ public class MaxentTest {
     @Test
     public void testLearnHyphen() {
         System.out.println("learn hyphen");
-        Dataset train = load("/smile/data/sequence/sparse.hyphen.6.train");
-        Dataset test = load("/smile/data/sequence/sparse.hyphen.6.test");
+        Dataset train = load("sequence/sparse.hyphen.6.train");
+        Dataset test = load("sequence/sparse.hyphen.6.test");
 
         Maxent maxent = new Maxent(train.p, train.x, train.y, 0.1, 1E-5, 500);
 
@@ -145,8 +144,8 @@ public class MaxentTest {
             }
         }
 
-        System.out.format("Protein error is %d of %d\n", error, test.x.length);
-        System.out.format("Hyphen error rate = %.2f%%\n", 100.0 * error / test.x.length);
+        System.out.format("Protein error is %d of %d%n", error, test.x.length);
+        System.out.format("Hyphen error rate = %.2f%%%n", 100.0 * error / test.x.length);
         assertEquals(765, error);
     }
 }

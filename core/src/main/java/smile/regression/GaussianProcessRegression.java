@@ -111,7 +111,7 @@ public class GaussianProcessRegression <T> implements Regression<T> {
         
         @Override
         public GaussianProcessRegression<T> train(T[] x, double[] y) {
-            return new GaussianProcessRegression<T>(x, y, kernel, lambda);
+            return new GaussianProcessRegression<>(x, y, kernel, lambda);
         }
         
         /**
@@ -125,7 +125,7 @@ public class GaussianProcessRegression <T> implements Regression<T> {
          * @return a trained Gaussian Process.
          */
         public GaussianProcessRegression<T> train(T[] x, double[] y, T[] t) {
-            return new GaussianProcessRegression<T>(x, y, t, kernel, lambda);
+            return new GaussianProcessRegression<>(x, y, t, kernel, lambda);
         }
     }
     
@@ -162,7 +162,7 @@ public class GaussianProcessRegression <T> implements Regression<T> {
             K[i][i] += lambda;
         }
 
-        CholeskyDecomposition cholesky = new CholeskyDecomposition(K, true);
+        CholeskyDecomposition cholesky = new CholeskyDecomposition(K);
         cholesky.solve(y, w);
     }
 
@@ -212,7 +212,7 @@ public class GaussianProcessRegression <T> implements Regression<T> {
         w = new double[m];
         Math.atx(G, y, b);
 
-        LUDecomposition lu = new LUDecomposition(K, true);
+        LUDecomposition lu = new LUDecomposition(K);
         lu.solve(b, w);
     }
 
