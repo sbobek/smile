@@ -21,7 +21,7 @@ package smile.math.matrix;
  * multiplication, which is the only operation needed in many iterative matrix
  * algorithms, e.g. biconjugate gradient method for solving linear equations and
  * power iteration and Lanczos algorithm for eigen decomposition, which are
- * usually very effecient for very large and sparse matrices.
+ * usually very efficient for very large and sparse matrices.
  *
  * @author Haifeng Li
  */
@@ -37,14 +37,29 @@ public interface IMatrix {
     public int ncols();
 
     /**
+     * Returns the matrix transpose.
+     */
+    public IMatrix transpose();
+
+    /**
      * Returns the entry value at row i and column j.
      */
     public double get(int i, int j);
 
     /**
-     * Set the entry value at row i and column j.
+     * Returns the entry value at row i and column j. For Scala users.
      */
-    public IMatrix set(int i, int j, double x);
+    public double apply(int i, int j);
+
+    /**
+     * Returns A' * A
+     */
+    public IMatrix ata();
+
+    /**
+     * Returns A * A'
+     */
+    public IMatrix aat();
 
     /**
      * y = A * x

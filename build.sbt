@@ -6,11 +6,13 @@ lazy val commonSettings = Seq(
   organization := "com.github.haifengl",
   organizationName := "Haifeng Li",
   organizationHomepage := Some(url("http://haifengl.github.io/")),
-  version := "1.2.0",
-  javacOptions in (Compile, compile) ++= Seq("-source", "1.8", "-target", "1.8", "-g:lines,vars,source"),
+  version := "1.2.1",
+  javacOptions in (Compile, compile) ++= Seq("-source", "1.8", "-target", "1.8", "-encoding", "UTF8", "-g:lines,vars,source", "-Xlint:unchecked"),
   javacOptions in (Compile, doc) ++= Seq("-Xdoclint:none"),
+  javaOptions in test += "-Dsmile.threads=1",
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.21" % "test",
   libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
-  scalaVersion := "2.11.7",
+  scalaVersion := "2.11.8",
   scalacOptions := Seq("-unchecked", "-deprecation", "-feature", "-encoding", "utf8"),
   parallelExecution in Test := false,
   crossPaths := false,
@@ -50,7 +52,7 @@ lazy val commonSettings = Seq(
 )
 
 lazy val nonPubishSettings = commonSettings ++ Seq(
-  publishArtifact := false,
+  //publishArtifact := false,
   publishLocal := {},
   publish := {},
   publishSigned := {},

@@ -61,7 +61,7 @@ import smile.stat.distribution.GaussianDistribution;
  * 
  * @author Haifeng Li
  */
-public class Matrix implements IMatrix {
+public class Matrix implements DenseMatrix {
 
     /**
      * The original matrix.
@@ -211,9 +211,54 @@ public class Matrix implements IMatrix {
     }
 
     @Override
+    public double apply(int i, int j) {
+        return A[i][j];
+    }
+
+    @Override
     public Matrix set(int i, int j, double x) {
         A[i][j] = x;
         return this;
+    }
+
+    @Override
+    public Matrix update(int i, int j, double x) {
+        A[i][j] = x;
+        return this;
+    }
+
+    @Override
+    public Matrix add(int i, int j, double x) {
+        A[i][j] += x;
+        return this;
+    }
+
+    @Override
+    public Matrix sub(int i, int j, double x) {
+        A[i][j] -= x;
+        return this;
+    }
+
+    @Override
+    public Matrix mul(int i, int j, double x) {
+        A[i][j] *= x;
+        return this;
+    }
+
+    @Override
+    public Matrix div(int i, int j, double x) {
+        A[i][j] /= x;
+        return this;
+    }
+
+    @Override
+    public Matrix ata() {
+        return new Matrix(Math.atamm(A));
+    }
+
+    @Override
+    public Matrix aat() {
+        return new Matrix(Math.aatmm(A));
     }
 
     @Override
@@ -353,6 +398,7 @@ public class Matrix implements IMatrix {
     /**
      * Returns the matrix transpose.
      */
+    @Override
     public Matrix transpose() {
         int m = A.length;
         int n = A[0].length;

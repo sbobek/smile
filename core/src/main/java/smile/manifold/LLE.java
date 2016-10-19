@@ -23,9 +23,7 @@ import smile.graph.AdjacencyList;
 import smile.graph.Graph;
 import smile.math.Math;
 import smile.math.distance.EuclideanDistance;
-import smile.math.matrix.EigenValueDecomposition;
-import smile.math.matrix.LUDecomposition;
-import smile.math.matrix.SparseMatrix;
+import smile.math.matrix.*;
 import smile.neighbor.CoverTree;
 import smile.neighbor.KDTree;
 import smile.neighbor.KNNSearch;
@@ -88,9 +86,9 @@ public class LLE {
 
         KNNSearch<double[], double[]> knn = null;
         if (D < 10) {
-            knn = new KDTree<double[]>(data, data);
+            knn = new KDTree<>(data, data);
         } else {
-            knn = new CoverTree<double[]>(data, new EuclideanDistance());
+            knn = new CoverTree<>(data, new EuclideanDistance());
         }
 
         Comparator<Neighbor<double[], double[]>> comparator = new Comparator<Neighbor<double[], double[]>>() {
@@ -149,7 +147,7 @@ public class LLE {
             colIndex[i] = colIndex[i - 1] + k + 1;
         }
 
-        double[][] C = new double[k][k];
+        DenseMatrix C = new ColumnMajorMatrix(k, k);
         double[] x = new double[k];
         double[] b = new double[k];
         for (int i = 0; i < k; i++) {
@@ -161,22 +159,22 @@ public class LLE {
             double trace = 0.0;
             for (int p = 0; p < k; p++) {
                 for (int q = 0; q < k; q++) {
-                    C[p][q] = 0.0;
+                    C.set(p, q, 0.0);
                     for (int l = 0; l < D; l++) {
-                        C[p][q] += (data[i][l] - data[N[i][p]][l]) * (data[i][l] - data[N[i][q]][l]);
+                        C.add(p, q, (data[i][l] - data[N[i][p]][l]) * (data[i][l] - data[N[i][q]][l]));
                     }
                 }
-                trace += C[p][p];
+                trace += C.get(p, p);
             }
 
             if (tol != 0.0) {
                 trace *= tol;
                 for (int p = 0; p < k; p++) {
-                    C[p][p] += trace;
+                    C.add(p, p, trace);
                 }
             }
 
-            LUDecomposition lu = new LUDecomposition(C, true);
+            LUDecomposition lu = new LUDecomposition(C);
             lu.solve(b, x);
 
             double sum = Math.sum(x);
@@ -201,8 +199,7 @@ public class LLE {
 
         // This is actually the transpose of W in the paper.
         SparseMatrix W = new SparseMatrix(n, n, w, rowIndex, colIndex);
-        SparseMatrix Wt = W.transpose();
-        SparseMatrix M = SparseMatrix.AAT(W, Wt);
+        SparseMatrix M = W.aat();
 
         EigenValueDecomposition eigen = EigenValueDecomposition.decompose(M, n);
 

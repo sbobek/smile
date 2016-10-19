@@ -109,21 +109,6 @@ public class SparseMatrixTest {
     }
 
     /**
-     * Test of set method, of class SparseMatrix.
-     */
-    @Test
-    public void testSet() {
-        System.out.println("set");
-        sm.set(0, 0, 0.8);
-        assertEquals(0.8, sm.get(0, 0), 1E-7);
-        sm.set(0, 0, 0.9);
-
-        sm.set(2, 2, 0.7);
-        assertEquals(0.7, sm.get(2, 2), 1E-7);
-        sm.set(2, 2, 0.8);
-    }
-
-    /**
      * Test of times method, of class SparseMatrix.
      */
     @Test
@@ -146,7 +131,7 @@ public class SparseMatrixTest {
     @Test
     public void testAAT() {
         System.out.println("AAT");
-        SparseMatrix c = SparseMatrix.AAT(sm, sm.transpose());
+        SparseMatrix c = sm.aat();
         assertEquals(c.nrows(), 3);
         assertEquals(c.ncols(), 3);
         assertEquals(c.size(), 9);

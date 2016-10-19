@@ -246,6 +246,22 @@ public class SingularValueDecomposition {
     }
 
     /**
+     * Returns the Cholesky decomposition of A'A.
+     */
+    public CholeskyDecomposition toCholesky() {
+        double[][] VD = new double[V.length][V[0].length];
+        for (int i = 0; i < V.length; i++) {
+            for (int j = 0; j < V[i].length; j++) {
+                VD[i][j] = V[i][j] * s[j];
+            }
+        }
+
+        double[][] A = Math.aatmm(VD);
+
+        return new CholeskyDecomposition(A);
+    }
+
+    /**
      * Solve A * x = b using the pseudoinverse of A as obtained by SVD.
      */
     public void solve(double[] b, double[] x) {
@@ -333,6 +349,21 @@ public class SingularValueDecomposition {
         }
 
         @Override
+        public ATA transpose() {
+            return this;
+        }
+
+        @Override
+        public ATA ata() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public ATA aat() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
         public void ax(double[] x, double[] y) {
             if (A.nrows() >= A.ncols()) {
                 A.ax(x, buf);
@@ -364,7 +395,7 @@ public class SingularValueDecomposition {
         }
 
         @Override
-        public ATA set(int i, int j, double x) {
+        public double apply(int i, int j) {
             throw new UnsupportedOperationException();
         }
 

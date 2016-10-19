@@ -384,8 +384,8 @@ public class EigenValueDecomposition {
     }
 
     /**
-     * Calculate and normalize y = (A - pI) x.* Returns the largest element of y
-     * in magnitude.
+     * Calculate and normalize y = (A - pI) x.
+     * Returns the largest element of y in magnitude.
      */
     private static double ax(IMatrix A, double[] x, double[] y, double p) {
         A.ax(x, y);
@@ -906,7 +906,7 @@ public class EigenValueDecomposition {
 
         logger.info("Lancozs method found {} converged eigenvalues of the {}-by-{} matrix", neig, step + 1, step + 1);
         if (neig != 0) {
-            for (int i = 0, n = 0; i <= step; i++) {
+            for (int i = 0; i <= step; i++) {
                 if (bnd[i] <= 16.0 * Math.EPSILON * Math.abs(ritz[i])) {
                     logger.info("ritz[{}] = {}", i, ritz[i]);
                 }
