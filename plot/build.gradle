@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':core'), project(':math')
+    compile group: 'org.swinglabs.swingx', name: 'swingx-core', version: '1.6.5-1'
+}

@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':graph'), project(':math'), project(':data'), project(':plot'),
+            project(':interpolation'), project(':core')
+}

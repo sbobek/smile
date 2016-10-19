@@ -1,5 +1,3 @@
-*.class
-
 # javadoc
 shell/src/universal/doc/api/
 
@@ -17,3 +15,21 @@ hs_err_pid*
 *.iml
 **/target
 
+### IntelliJ IDEA ###
+.idea
+
+### Java ###
+*.class
+
+### Gradle ###
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
