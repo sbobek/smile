@@ -1,1 +1,3 @@
 include 'core', 'data', 'demo', 'graph', 'interpolation', 'math', 'nlp', 'plot'
+include 'stream'
+
