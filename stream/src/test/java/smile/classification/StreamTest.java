@@ -16,6 +16,7 @@ import java.text.ParseException;
 public class StreamTest {
     @Test
     public void testSeaKNN() {
+        System.out.println("KNN");
         DelimitedTextParser parser = new DelimitedTextParser();
         parser.setDelimiter(",");
         parser.setResponseIndex(new NominalAttribute("class"), 3);
@@ -37,16 +38,19 @@ public class StreamTest {
      * Test of learn method, of class DecisionTree.
      */
     @Test
-    public void testUSPSDecisionTree() {
-        System.out.println("USPS");
+    public void testSeaDecisionTree() {
+        System.out.println("Decision Tree");
         DelimitedTextParser parser = new DelimitedTextParser();
-        parser.setResponseIndex(new NominalAttribute("class"), 0);
-        try {
-            AttributeDataset train = parser.parse("USPS Train", new FileInputStream("/home/joanna/IdeaProjects/smiling/shell/src/universal/data/usps/zip.train"));
-            double[][] x = train.toArray(new double[train.size()][]);
-            int[] y = train.toArray(new int[train.size()]);
+        parser.setDelimiter(",");
+        parser.setResponseIndex(new NominalAttribute("class"), 3);
 
-            Stream stream = new Stream(500, "tree"); //the number indicates the maxWindowSize
+
+        try {
+            AttributeDataset attributeDataset = parser.parse("SEA", new FileInputStream("/home/joanna/IdeaProjects/smiling/shell/src/universal/data/stream/sea.data"));
+            double[][] x = attributeDataset.toArray(new double[0][]);
+            int[] y = attributeDataset.toArray(new int[0]);
+
+            Stream stream = new Stream(300, "tree"); //the number indicates the maxWindowSize
 
             stream.start(x, y);
 
