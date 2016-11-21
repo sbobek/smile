@@ -1,6 +1,5 @@
 package smile.classification;
 
-import org.apache.commons.lang3.ArrayUtils;
 import smile.math.DoubleArrayList;
 
 import java.util.LinkedList;
@@ -24,6 +23,29 @@ public class Window {
         this.maxSize = maxSize;
         this.fifoX = new LinkedList<>();
         this.fifoY = new LinkedList<>();
+    }
+
+    /**
+     * <p>Converts an array of object Integers to primitives.
+     * Got from Apache Commons library.
+     * <p>
+     * <p>This method returns {@code null} for a {@code null} input array.
+     *
+     * @param array a {@code Integer} array, may be {@code null}
+     * @return an {@code int} array, {@code null} if null array input
+     * @throws NullPointerException if array content is {@code null}
+     */
+    public static int[] toPrimitive(final Integer[] array) {
+        if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return new int[0];
+        }
+        final int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = array[i];
+        }
+        return result;
     }
 
     private LinkedList<DoubleArrayList> getFifoX() {
@@ -59,7 +81,7 @@ public class Window {
         for (int i = 0; i < fifoY.size(); i++) {
             integers[i] = fifoY.get(i);
         }
-        int[] primitives = ArrayUtils.toPrimitive(integers);
+        int[] primitives = Window.toPrimitive(integers);
         return primitives;
     }
 

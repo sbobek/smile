@@ -1,0 +1,28 @@
+IRIS Decision Tree
+Initializing all stored constants.
+***100***
+Number of errors 1
+MIN probability: 1.66667%
+MIN deviation: 0.01653%
+***101***
+***102***
+***103***
+***104***
+***105***
+WARNING LEVEL on 105 index
+Probability of misclassified: 0.03333%
+Standard deviation: 0.02317%
+***106***
+***107***
+***108***
+Number of errors 0
+MIN probability: 0.00000%
+MIN deviation: 0.00000%
+DRIFT LEVEL on 108 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Initializing all stored constants.
+***105***
+Number of errors 2
+MIN probability: 6.45161%
+MIN deviation: 0.04412%

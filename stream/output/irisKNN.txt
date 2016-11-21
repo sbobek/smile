@@ -1,0 +1,20 @@
+IRIS KNN
+Initializing all stored constants.
+***100***
+Number of errors 1
+MIN probability: 1.00000%
+MIN deviation: 0.00995%
+***101***
+WARNING LEVEL on 101 index
+Probability of misclassified: 0.02000%
+Standard deviation: 0.01400%
+***102***
+DRIFT LEVEL on 102 index
+Probability of misclassified: 0.03000%
+Standard deviation: 0.01706%
+Initializing all stored constants.
+***101***
+Number of errors 4
+MIN probability: 7.84314%
+MIN deviation: 0.03765%
+***102***

@@ -1,12 +1,21 @@
 package smile.classification;
 
 
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
 /**
  * Created by joanna on 11/3/16.
  * Stream is a class, which imitates streaming data
  */
 public class Stream {
 
+    private final static Logger LOGGER = Logger.getLogger(Stream.class.getName());
+    private static FileHandler fileHandler;
+    private static SimpleFormatter formatter;
     private int maxWindowSize;
 
     private double minProbability = Double.MAX_VALUE;
@@ -24,9 +33,15 @@ public class Stream {
     private double currentStandardDeviation;
     private double minSum;
 
-    Stream(int maxWindowSize, String algorithmType) {
+    Stream(int maxWindowSize, String algorithmType) throws IOException {
         this.maxWindowSize = maxWindowSize;
         this.algorithmType = algorithmType;
+
+        //set Logger
+        LOGGER.setLevel(Level.ALL);
+        fileHandler = new FileHandler("Logging.txt");
+        fileHandler.setFormatter(formatter);
+        LOGGER.addHandler(fileHandler);
     }
 
     public void start(double[][] x, int[] y) {
@@ -34,7 +49,7 @@ public class Stream {
         int iterator;
 
         //fill the window with the data for the first time to avoid NullPointerException <- it's a zero DataChunk
-        for (iterator = 0; iterator < 50; iterator++) {
+        for (iterator = 0; iterator < 100; iterator++) {
             window.add(x[iterator], y[iterator]);
         }
 
@@ -57,6 +72,7 @@ public class Stream {
 
                 initialize();
             } else {
+                LOGGER.info("***" + iterator + "***");
                 System.out.println("***" + iterator + "***");
 
                 //add an element to window
@@ -78,7 +94,7 @@ public class Stream {
                 ++iterator;
             }
         }
-
+        LOGGER.info("Number of drifts: " + numberOfDrifts);
         System.out.println("Number of drifts: " + numberOfDrifts);
     }
 
@@ -89,7 +105,7 @@ public class Stream {
 
         switch (algorithmType) {
             case "knn":
-                KNN<double[]> knn = KNN.learn(newX, newY, 10);
+                KNN<double[]> knn = KNN.learn(newX, newY, 15);
                 return knn;
             case "tree":
                 DecisionTree tree = new DecisionTree(newX, newY, 350, DecisionTree.SplitRule.ENTROPY);
@@ -100,6 +116,7 @@ public class Stream {
     }
 
     private void initialize() {
+        LOGGER.info("Initializing all stored constants.");
         System.out.println("Initializing all stored constants.");
 
         driftDetected = false;
@@ -133,10 +150,13 @@ public class Stream {
 
             //checking the min probability and deviation
             if (currentProbability + currentStandardDeviation < minSum) {
+                LOGGER.info("Number of errors " + error);
                 System.out.println("Number of errors " + error);
                 minProbability = currentProbability;
                 minDeviation = currentStandardDeviation;
                 minSum = currentProbability + currentStandardDeviation;
+                LOGGER.info("MIN probability: " + minProbability);
+                LOGGER.info("MIN deviation: " + minDeviation);
                 System.out.format("MIN probability: %.5f%%%n", minProbability * 100.0);
                 System.out.format("MIN deviation: %.5f%%%n", minDeviation);
             }
@@ -145,6 +165,9 @@ public class Stream {
             if (warningIndex == -1) {
                 if (currentProbability + currentStandardDeviation >= minProbability + 2 * minDeviation) {
                     warningIndex = iterator;
+                    LOGGER.info("WARNING LEVEL on " + warningIndex + " index");
+                    LOGGER.info("Probability of misclassified: " + currentProbability);
+                    LOGGER.info("Standard deviation: " + currentStandardDeviation);
                     System.out.println("WARNING LEVEL on " + warningIndex + " index");
                     System.out.format("Probability of misclassified: %.5f%%%n", currentProbability);
                     System.out.format("Standard deviation: %.5f%%%n", currentStandardDeviation);
@@ -154,6 +177,9 @@ public class Stream {
             //check the occurrence of concept drift
             if (currentProbability + currentStandardDeviation >= minProbability + 3 * minDeviation) {
                 driftIndex = iterator;
+                LOGGER.info("DRIFT LEVEL on " + driftIndex + " index");
+                LOGGER.info("Probability of misclassified: " + currentProbability);
+                LOGGER.info("Standard deviation: " + currentStandardDeviation);
                 System.out.println("DRIFT LEVEL on " + driftIndex + " index");
                 System.out.format("Probability of misclassified: %.5f%%%n", currentProbability);
                 System.out.format("Standard deviation: %.5f%%%n", currentStandardDeviation);
