@@ -35,7 +35,7 @@ public class StreamSimulationTest {
         simulation.readStreamData();
     }
 
-    //PONIŻSZE NIE DZIAŁA!
+    //It doesn't work yet.
     @Test
     public void testReadKddcup() throws Exception {
         StreamSimulation simulation = new StreamSimulation("/home/joanna/IdeaProjects/smiling/shell/src/universal/data/stream/kddcup.arff", 41);

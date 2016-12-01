@@ -21,16 +21,24 @@ public class StreamSimulation {
         this.classIndex = classIndex;
     }
 
-    public void start() {
-        DriftDetector driftDetector = DriftDetector.getInstance(50, "knn");
+    public void start(String classifierName, int maxWindowSize, int alpha, int beta) {
 
         AttributeDataset attributeDataset = this.parseFile();
         double[][] x = attributeDataset.toArray(new double[0][]);
         int[] y = attributeDataset.toArray(new int[0]);
 
-        for (int i = 0; i < y.length; i++) {
-            driftDetector.update(x[i], y[i], i);
+        Window window = Window.getInstance(maxWindowSize);
+        for (int i = 0; i < maxWindowSize; i++) {
+            window.add(x[i], y[i]);
         }
+
+        DriftDetector driftDetector = DriftDetector.getInstance(maxWindowSize, classifierName);
+
+        for (int i = maxWindowSize; i < y.length; ) {
+            i = driftDetector.update(x[i], y[i], i, alpha, beta);
+        }
+        System.out.println("Number of Drifts: " + driftDetector.getNumberOfDrifts() + " for alpha=" + alpha + ", beta=" + beta);
+
     }
 
     public void readStreamData() {

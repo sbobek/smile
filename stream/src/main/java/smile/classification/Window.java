@@ -10,19 +10,30 @@ import java.util.LinkedList;
  */
 public class Window {
 
-    int maxSize;
+    private static Window instance = null;
+    private static int maxSize;
     private LinkedList<DoubleArrayList> fifoX;
     private LinkedList<Integer> fifoY;
+    private int entropy;
 
-    /**
-     * Create window.
-     *
-     * @param maxSize indicates the max size of the window
-     */
-    Window(int maxSize) {
-        this.maxSize = maxSize;
+    private Window(int maxWindowSize) {
+        maxSize = maxWindowSize;
         this.fifoX = new LinkedList<>();
         this.fifoY = new LinkedList<>();
+    }
+
+    public static Window getInstance(int maxWindowSize) {
+        if (instance == null) {
+            instance = new Window(maxWindowSize);
+        }
+        return instance;
+    }
+
+    public static Window getInstance() {
+        if (instance == null) {
+            instance = new Window(maxSize);
+        }
+        return instance;
     }
 
     /**
@@ -125,6 +136,10 @@ public class Window {
      */
     int getSize() {
         return fifoX.size() == fifoY.size() ? fifoX.size() : 0;
+    }
+
+    public int getEntropy() {
+        return entropy;
     }
 }
 
