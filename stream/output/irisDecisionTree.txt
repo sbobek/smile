@@ -1,28 +1,191 @@
 IRIS Decision Tree
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.1392329990550989
+Entropy: 0.2351933818192415
+Entropy: 0.3138129641688651
+Entropy: 0.3809465857053901
+Entropy: 0.43949698692151334
+Entropy: 0.4912373418243331
+Entropy: 0.5373760853377335
+Entropy: 0.5787946246321198
+Entropy: 0.6161661934005355
+Entropy: 0.6500224216483541
+Entropy: 0.6873150928309273
+Entropy: 0.7219280948873623
+Entropy: 0.7540340561971326
+Entropy: 0.7837769474847011
+Entropy: 0.8112781244591328
 Initializing all stored constants.
-***100***
-Number of errors 1
-MIN probability: 1.66667%
-MIN deviation: 0.01653%
-***101***
-***102***
-***103***
-***104***
-***105***
-WARNING LEVEL on 105 index
-Probability of misclassified: 0.03333%
-Standard deviation: 0.02317%
-***106***
-***107***
-***108***
+Entropy: 0.8112781244591328
+***65***
 Number of errors 0
 MIN probability: 0.00000%
 MIN deviation: 0.00000%
-DRIFT LEVEL on 108 index
+WARNING LEVEL on 65 index
 Probability of misclassified: 0.00000%
 Standard deviation: 0.00000%
+DRIFT LEVEL on 65 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Entropy: 0.8366407419411673
 Initializing all stored constants.
-***105***
-Number of errors 2
-MIN probability: 6.45161%
-MIN deviation: 0.04412%
+Entropy: 0.9967916319816367
+***65***
+Number of errors 0
+MIN probability: 0.00000%
+MIN deviation: 0.00000%
+WARNING LEVEL on 65 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+DRIFT LEVEL on 65 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Entropy: 0.9932338197397066
+Initializing all stored constants.
+Entropy: 0.0
+***65***
+Entropy: 0.0
+***66***
+Entropy: 0.0
+***67***
+Entropy: 0.0
+***68***
+Entropy: 0.0
+***69***
+Entropy: 0.0
+***70***
+Entropy: 0.0
+***71***
+Entropy: 0.0
+***72***
+Entropy: 0.0
+***73***
+Entropy: 0.0
+***74***
+Entropy: 0.0
+***75***
+Entropy: 0.0
+***76***
+Entropy: 0.0
+***77***
+Entropy: 0.0
+***78***
+Entropy: 0.0
+***79***
+Entropy: 0.0
+***80***
+Number of errors 0
+MIN probability: 0.00000%
+MIN deviation: 0.00000%
+WARNING LEVEL on 80 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+DRIFT LEVEL on 80 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Entropy: 0.0
+Initializing all stored constants.
+Entropy: 0.0
+***80***
+Entropy: 0.0
+***81***
+Entropy: 0.0
+***82***
+Entropy: 0.0
+***83***
+Entropy: 0.0
+***84***
+Entropy: 0.0
+***85***
+Entropy: 0.0
+***86***
+Entropy: 0.0
+***87***
+Entropy: 0.0
+***88***
+Entropy: 0.0
+***89***
+Entropy: 0.0
+***90***
+Entropy: 0.0
+***91***
+Entropy: 0.0
+***92***
+Entropy: 0.0
+***93***
+Entropy: 0.0
+***94***
+Entropy: 0.0
+***95***
+Number of errors 0
+MIN probability: 0.00000%
+MIN deviation: 0.00000%
+WARNING LEVEL on 95 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+DRIFT LEVEL on 95 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Entropy: 0.0
+Initializing all stored constants.
+Entropy: 0.0
+***95***
+Entropy: 0.0
+***96***
+Entropy: 0.0
+***97***
+Entropy: 0.0
+***98***
+Entropy: 0.0
+***99***
+Entropy: 0.0
+***100***

@@ -1,20 +1,590 @@
 IRIS KNN
+X length: 150 y length: 150
+Entropy: 0.0
+Entropy: 0.0
+Entropy: 0.9182958340544894
 Initializing all stored constants.
-***100***
+Entropy: 0.9182958340544894
+***3***
+Entropy: 1.0
+***4***
+Entropy: 0.9709505944546688
+***5***
+Entropy: 1.0
+***6***
+Entropy: 0.9852281360342515
+***7***
+Entropy: 0.954434002924965
+***8***
+Entropy: 0.9182958340544894
+***9***
+Entropy: 0.9709505944546688
+***10***
+Entropy: 0.9940302114769566
+***11***
+Entropy: 1.0
+***12***
+Entropy: 0.9957274520849256
+***13***
+Entropy: 1.2958363892911637
+***14***
+Entropy: 1.429473298359841
+***15***
+Entropy: 1.5052408149441479
+***16***
+Entropy: 1.4836591643979626
+***17***
+Entropy: 1.4591479170272446
+***18***
+Entropy: 1.4329831210560053
+***19***
+Entropy: 1.4060075793123286
+***20***
+Entropy: 1.3787834934861756
+***21***
+Entropy: 1.4353713907745334
+***22***
+Entropy: 1.474041717473638
+***23***
+Entropy: 1.5
+***24***
+Entropy: 1.5166238110793628
+***25***
+Entropy: 1.534188990546464
+***26***
+Entropy: 1.5448491887169093
+***27***
+Entropy: 1.5501992264848214
+***28***
+Entropy: 1.5514183947161677
+***29***
+Entropy: 1.5493978533396062
+***30***
+Number of errors 3
+MIN probability: 9.67742%
+MIN deviation: 0.05310%
+Entropy: 1.5448226177510371
+***31***
+Number of errors 3
+MIN probability: 9.37500%
+MIN deviation: 0.05153%
+Entropy: 1.5382265375346467
+***32***
+Number of errors 3
+MIN probability: 9.09091%
+MIN deviation: 0.05004%
+Entropy: 1.5333966306896163
+***33***
+Number of errors 3
+MIN probability: 8.82353%
+MIN deviation: 0.04864%
+Entropy: 1.5268696148078722
+***34***
+Number of errors 3
+MIN probability: 8.57143%
+MIN deviation: 0.04732%
+Entropy: 1.5189813105345322
+***35***
+Number of errors 3
+MIN probability: 8.33333%
+MIN deviation: 0.04606%
+Entropy: 1.5100027572690504
+***36***
+Number of errors 3
+MIN probability: 8.10811%
+MIN deviation: 0.04487%
+Entropy: 1.5001542009939985
+***37***
+Number of errors 2
+MIN probability: 5.26316%
+MIN deviation: 0.03622%
+Entropy: 1.5218068650991126
+***38***
+Number of errors 2
+MIN probability: 5.12821%
+MIN deviation: 0.03532%
+Entropy: 1.5386865868091513
+***39***
+Number of errors 2
+MIN probability: 5.00000%
+MIN deviation: 0.03446%
+Entropy: 1.5516314552382728
+***40***
+Number of errors 2
+MIN probability: 4.87805%
+MIN deviation: 0.03364%
+Entropy: 1.5612999938351513
+***41***
+Number of errors 2
+MIN probability: 4.76190%
+MIN deviation: 0.03286%
+Entropy: 1.5682189788324785
+***42***
+Number of errors 2
+MIN probability: 4.65116%
+MIN deviation: 0.03211%
+Entropy: 1.5728158948666522
+***43***
+Number of errors 2
+MIN probability: 4.54545%
+MIN deviation: 0.03140%
+Entropy: 1.5754417653214694
+***44***
+Entropy: 1.5786796270214818
+***45***
+Entropy: 1.5802316050963607
+***46***
+Entropy: 1.5803369961443987
+***47***
+WARNING LEVEL on 47 index
+Probability of misclassified: 0.08333%
+Standard deviation: 0.03989%
+Entropy: 1.579197802568698
+***48***
+DRIFT LEVEL on 48 index
+Probability of misclassified: 0.10204%
+Standard deviation: 0.04324%
+Entropy: 1.5769856148085992
+49
+Initializing all stored constants.
+Entropy: 1.5156546557441943
+***47***
+Entropy: 1.4986885704510973
+***48***
+Entropy: 1.480618302361438
+***49***
+Entropy: 1.4618278953766808
+***50***
+Entropy: 1.4701429793353156
+***51***
+Entropy: 1.4741227078131964
+***52***
+Entropy: 1.4746786893334003
+***53***
+Number of errors 2
+MIN probability: 6.45161%
+MIN deviation: 0.04412%
+Entropy: 1.4617205938199442
+***54***
+Number of errors 2
+MIN probability: 6.25000%
+MIN deviation: 0.04279%
+Entropy: 1.4480191162672789
+***55***
+Number of errors 2
+MIN probability: 6.06061%
+MIN deviation: 0.04154%
+Entropy: 1.433780283579579
+***56***
+Number of errors 2
+MIN probability: 5.88235%
+MIN deviation: 0.04035%
+Entropy: 1.419167596973613
+***57***
+Number of errors 2
+MIN probability: 5.71429%
+MIN deviation: 0.03923%
+Entropy: 1.4043112730913891
+***58***
+Number of errors 2
+MIN probability: 5.55556%
+MIN deviation: 0.03818%
+Entropy: 1.3893152742980255
+***59***
+Number of errors 2
+MIN probability: 5.40541%
+MIN deviation: 0.03717%
+Entropy: 1.374262712715408
+***60***
 Number of errors 1
-MIN probability: 1.00000%
-MIN deviation: 0.00995%
-***101***
-WARNING LEVEL on 101 index
-Probability of misclassified: 0.02000%
-Standard deviation: 0.01400%
-***102***
-DRIFT LEVEL on 102 index
-Probability of misclassified: 0.03000%
-Standard deviation: 0.01706%
+MIN probability: 2.63158%
+MIN deviation: 0.02597%
+Entropy: 1.3829839249845157
+***61***
+Number of errors 1
+MIN probability: 2.56410%
+MIN deviation: 0.02531%
+Entropy: 1.3891452268462234
+***62***
+Number of errors 1
+MIN probability: 2.50000%
+MIN deviation: 0.02469%
+Entropy: 1.3931462133474315
+***63***
+Number of errors 1
+MIN probability: 2.43902%
+MIN deviation: 0.02409%
+Entropy: 1.395316265912753
+***64***
+Number of errors 1
+MIN probability: 2.38095%
+MIN deviation: 0.02352%
+Entropy: 1.3959291762837418
+***65***
+Number of errors 1
+MIN probability: 2.32558%
+MIN deviation: 0.02298%
+Entropy: 1.3952141813521783
+***66***
+Number of errors 1
+MIN probability: 2.27273%
+MIN deviation: 0.02247%
+Entropy: 1.3933644282111064
+***67***
+WARNING LEVEL on 67 index
+Probability of misclassified: 0.04444%
+Standard deviation: 0.03072%
+Entropy: 1.4294732983598408
+***68***
+DRIFT LEVEL on 68 index
+Probability of misclassified: 0.06522%
+Standard deviation: 0.03640%
+Entropy: 1.4594576004326907
+69
 Initializing all stored constants.
+Entropy: 1.3377780971924957
+***67***
+Entropy: 1.4171326567191829
+***68***
+Entropy: 1.4729350396193692
+***69***
+Entropy: 1.512644747821065
+***70***
+Entropy: 1.540709585192697
+***71***
+Entropy: 1.5600508789044925
+***72***
+Entropy: 1.5559471998026149
+***73***
+Entropy: 1.5493978533396062
+***74***
+Number of errors 0
+MIN probability: 0.00000%
+MIN deviation: 0.00000%
+WARNING LEVEL on 74 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+DRIFT LEVEL on 74 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Entropy: 1.5409399040885625
+75
+Initializing all stored constants.
+Entropy: 0.9967916319816367
+***74***
+Entropy: 0.9886994082884974
+***75***
+Entropy: 0.9774178175281716
+***76***
+Entropy: 0.964078764808229
+***77***
+Entropy: 0.9494520153879485
+***78***
+Entropy: 0.9709505944546688
+***79***
+Entropy: 0.9852281360342515
+***80***
+Entropy: 0.9940302114769566
+***81***
+Entropy: 0.9986359641585719
+***82***
+Entropy: 1.0
+***83***
+Entropy: 0.9988455359952018
+***84***
+Entropy: 0.9957274520849256
+***85***
+Entropy: 0.9910760598382222
+***86***
+Entropy: 0.9852281360342515
+***87***
+Entropy: 0.9784493292686188
+***88***
+Entropy: 0.9871377743721862
+***89***
+Number of errors 0
+MIN probability: 0.00000%
+MIN deviation: 0.00000%
+WARNING LEVEL on 89 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+DRIFT LEVEL on 89 index
+Probability of misclassified: 0.00000%
+Standard deviation: 0.00000%
+Entropy: 0.9932338197397066
+90
+Initializing all stored constants.
+Entropy: 0.9182958340544894
+***89***
+Entropy: 0.954434002924965
+***90***
+Entropy: 0.9774178175281716
+***91***
+Entropy: 0.9910760598382222
+***92***
+Entropy: 0.9980008838722995
+***93***
+Entropy: 1.0
+***94***
+Entropy: 0.998363672593813
+***95***
+Entropy: 1.0
+***96***
+Entropy: 0.9986359641585719
+***97***
+Entropy: 0.99498482818597
+***98***
+Entropy: 0.9895875212220555
+***99***
+Entropy: 0.9828586897127057
+***100***
+Entropy: 0.975119064940866
 ***101***
-Number of errors 4
-MIN probability: 7.84314%
-MIN deviation: 0.03765%
+Entropy: 0.9666186325481027
 ***102***
+Entropy: 0.9575534837147484
+***103***
+Entropy: 0.9480782435939054
+***104***
+Number of errors 1
+MIN probability: 3.22581%
+MIN deviation: 0.03173%
+Entropy: 0.9629004147713268
+***105***
+Number of errors 1
+MIN probability: 3.12500%
+MIN deviation: 0.03076%
+Entropy: 0.9744894033980523
+***106***
+Number of errors 1
+MIN probability: 3.03030%
+MIN deviation: 0.02984%
+Entropy: 0.9833761901392238
+***107***
+Number of errors 1
+MIN probability: 2.94118%
+MIN deviation: 0.02898%
+Entropy: 0.9899927915575186
+***108***
+Number of errors 1
+MIN probability: 2.85714%
+MIN deviation: 0.02816%
+Entropy: 0.9946937953613058
+***109***
+Number of errors 1
+MIN probability: 2.77778%
+MIN deviation: 0.02739%
+Entropy: 0.997772472089982
+***110***
+Number of errors 1
+MIN probability: 2.70270%
+MIN deviation: 0.02666%
+Entropy: 0.9994730201859837
+***111***
+Number of errors 1
+MIN probability: 2.63158%
+MIN deviation: 0.02597%
+Entropy: 1.0
+***112***
+Number of errors 1
+MIN probability: 2.56410%
+MIN deviation: 0.02531%
+Entropy: 0.9995256892936492
+***113***
+Number of errors 1
+MIN probability: 2.50000%
+MIN deviation: 0.02469%
+Entropy: 0.99819587904281
+***114***
+Number of errors 1
+MIN probability: 2.43902%
+MIN deviation: 0.02409%
+Entropy: 0.9961344835095797
+***115***
+Number of errors 1
+MIN probability: 2.38095%
+MIN deviation: 0.02352%
+Entropy: 0.9934472383802027
+***116***
+Number of errors 1
+MIN probability: 2.32558%
+MIN deviation: 0.02298%
+Entropy: 0.9902246902198684
+***117***
+Number of errors 1
+MIN probability: 2.27273%
+MIN deviation: 0.02247%
+Entropy: 1.1242106465296637
+***118***
+WARNING LEVEL on 118 index
+Probability of misclassified: 0.04444%
+Standard deviation: 0.03072%
+Entropy: 1.208525923602211
+***119***
+DRIFT LEVEL on 119 index
+Probability of misclassified: 0.06522%
+Standard deviation: 0.03640%
+Entropy: 1.273461732689636
+120
+Initializing all stored constants.
+Entropy: 1.370862465083061
+***118***
+Entropy: 1.4284124677945969
+***119***
+Entropy: 1.4691825391877553
+***120***
+Entropy: 1.4978637260424625
+***121***
+Entropy: 1.5175287893990002
+***122***
+Entropy: 1.5303120366919818
+***123***
+Entropy: 1.5377559674303916
+***124***
+Entropy: 1.5410078709714834
+***125***
+Number of errors 2
+MIN probability: 6.45161%
+MIN deviation: 0.04412%
+Entropy: 1.5409399040885625
+***126***
+Number of errors 2
+MIN probability: 6.25000%
+MIN deviation: 0.04279%
+Entropy: 1.538226537534647
+***127***
+Number of errors 2
+MIN probability: 6.06061%
+MIN deviation: 0.04154%
+Entropy: 1.5333966306896163
+***128***
+Entropy: 1.5268696148078722
+***129***
+Number of errors 2
+MIN probability: 5.71429%
+MIN deviation: 0.03923%
+Entropy: 1.5189813105345322
+***130***
+Entropy: 1.5100027572690504
+***131***
+Entropy: 1.5001542009939985
+***132***
+Entropy: 1.4994716801681787
+***133***
+WARNING LEVEL on 133 index
+Probability of misclassified: 0.10256%
+Standard deviation: 0.04858%
+Entropy: 1.497153201175408
+***134***
+Number of errors 2
+MIN probability: 5.00000%
+MIN deviation: 0.03446%
+Entropy: 1.4934692759958876
+***135***
+Number of errors 2
+MIN probability: 4.87805%
+MIN deviation: 0.03364%
+Entropy: 1.488644173961626
+***136***
+Number of errors 2
+MIN probability: 4.76190%
+MIN deviation: 0.03286%
+Entropy: 1.4828649755973171
+***137***
+Number of errors 2
+MIN probability: 4.65116%
+MIN deviation: 0.03211%
+Entropy: 1.476288580025653
+***138***
+Number of errors 1
+MIN probability: 2.27273%
+MIN deviation: 0.02247%
+Entropy: 1.5003977309853904
+***139***
+Number of errors 1
+MIN probability: 2.22222%
+MIN deviation: 0.02197%
+Entropy: 1.5201460725593479
+***140***
+Number of errors 1
+MIN probability: 2.17391%
+MIN deviation: 0.02150%
+Entropy: 1.5362408255014146
+***141***
+Number of errors 1
+MIN probability: 2.12766%
+MIN deviation: 0.02105%
+Entropy: 1.549243343982017
+***142***
+Number of errors 1
+MIN probability: 2.08333%
+MIN deviation: 0.02062%
+Entropy: 1.5596074785266192
+***143***
+Entropy: 1.554608207224251
+***144***
+Entropy: 1.5489545060094523
+***145***
+Entropy: 1.542740755306198
+***146***
+Entropy: 1.5360485008483822
+***147***
+DRIFT LEVEL on 147 index
+Probability of misclassified: 0.07547%
+Standard deviation: 0.03628%
+Entropy: 1.5289484106534372
+148
+Initializing all stored constants.
+Entropy: 1.273650919075993
+***133***
+Entropy: 1.2486545206672302
+***134***
+Entropy: 1.2244883781338565
+***135***
+Entropy: 1.2011464305695012
+***136***
+Entropy: 1.1786137171821593
+***137***
+Number of errors 3
+MIN probability: 9.67742%
+MIN deviation: 0.05310%
+Entropy: 1.156869339920509
+***138***
+Number of errors 2
+MIN probability: 6.25000%
+MIN deviation: 0.04279%
+Entropy: 1.1994602933016412
+***139***
+Number of errors 2
+MIN probability: 6.06061%
+MIN deviation: 0.04154%
+Entropy: 1.2335159355880365
+***140***
+Number of errors 2
+MIN probability: 5.88235%
+MIN deviation: 0.04035%
+Entropy: 1.2607717938967942
+***141***
+Number of errors 2
+MIN probability: 5.71429%
+MIN deviation: 0.03923%
+Entropy: 1.282516713430642
+***142***
+Number of errors 2
+MIN probability: 5.55556%
+MIN deviation: 0.03818%
+Entropy: 1.2997367636952524
+***143***
+Entropy: 1.283474826759087
+***144***
+Entropy: 1.2674438038072338
+***145***
+Entropy: 1.2516666882663061
+***146***
+Entropy: 1.2361602543738117
+***147***
+Entropy: 1.220936309318394
+***148***
+Entropy: 1.2060026902433667
+***149***
+Number of drifts: 6
