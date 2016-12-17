@@ -10,7 +10,7 @@ For the original version of Smile, see [project website](http://haifengl.github.
 Original Smile
 =====
 
-[![Join the chat at https://gitter.im/haifengl/smile](https://badges.gitter.im/haifengl/smile.svg)](https://gitter.im/haifengl/smile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/haifengl/smile](https://badges.gitter.im/haifengl/smile.svg)](https://gitter.im/haifengl/smile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.haifengl/smile-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.haifengl/smile-core)
 
 Smile (Statistical Machine Intelligence and Learning Engine) is
 a fast and comprehensive machine learning system.
@@ -53,7 +53,7 @@ You can use the libraries through Maven central repository by adding the followi
     <dependency>
       <groupId>com.github.haifengl</groupId>
       <artifactId>smile-core</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.1</version>
     </dependency>
 ```
 For NLP, use the artifactId smile-nlp.
@@ -63,7 +63,7 @@ For Scala API, please use
     <dependency>
       <groupId>com.github.haifengl</groupId>
       <artifactId>smile-scala_2.11</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.1</version>
     </dependency>
 ```
 
@@ -140,7 +140,7 @@ To use SmilePlot, add the following to dependencies
     <dependency>
       <groupId>com.github.haifengl</groupId>
       <artifactId>smile-plot</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.1</version>
     </dependency>
 ```
 
